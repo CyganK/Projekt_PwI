@@ -39,7 +39,8 @@ main{
 	grid-template-rows: repeat(2, 300px);
 	align-items: center;
 	justify-content: center;
-	row-gap: 50px;
+	row-gap: 150px;
+	column-gap: 20px;
 }
 .div0 article img{
 	width: 450px;
