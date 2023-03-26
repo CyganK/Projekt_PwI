@@ -59,13 +59,13 @@ function kliknięcie(event) {
 
 // funkcja wykonywana, gdy gra jest w trybie jednoosobowym i ruch wykonuje komputer
 function NPC() {
-  const emptyCells = plansza.reduce((acc, value, index) => {
+  const Puste = plansza.reduce((acc, value, index) => {
     if (value === null) {
       acc.push(index);
     }
     return acc;
   }, []);
-  const Random = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+  const Random = Puste[Math.floor(Math.random() * Puste.length)];
   plansza[Random] = aktualny_gracz;
   Tablica();
   if (czy_wygana(aktualny_gracz)) {
@@ -92,6 +92,7 @@ function Reset() {
 const Przycisk_Start = document.getElementById('start-game');
 Przycisk_Start.addEventListener('click', () => {
   tryb = document.querySelector('input[name="tryb"]:checked').id;
+  Reset();
   Tablica();
 });
 
